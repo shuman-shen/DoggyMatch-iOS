@@ -23,7 +23,24 @@ class ResultViewController: UIViewController {
         resultText.text = "Breed: " + item.dog.name + "\nSize: \(item.dog.size)\nDescription: \(item.dog.info)"
     }
     
-
+    @IBAction func saveButton(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Breed", message: "Save to Favourites?", preferredStyle: .alert)
+        
+        let saveButton = UIAlertAction(title: "Save", style: .default, handler: { (action) -> Void in
+            print("Saved to favourites")
+        })
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in
+            print("Cancel save")
+        })
+        
+        alertController.addAction(saveButton)
+        alertController.addAction(cancelButton)
+        
+        self.navigationController!.present(alertController, animated: true, completion: nil)
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 

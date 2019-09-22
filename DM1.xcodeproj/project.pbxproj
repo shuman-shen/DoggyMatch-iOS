@@ -25,6 +25,7 @@
 		ABE3FE962337110300FAF8BA /* FavCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FE952337110300FAF8BA /* FavCollectionViewController.swift */; };
 		ABE3FE9C2337231E00FAF8BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FE9B2337231E00FAF8BA /* SearchViewController.swift */; };
 		ABE3FE9E23373BBE00FAF8BA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FE9D23373BBE00FAF8BA /* ProfileViewController.swift */; };
+		ABE3FEDD2337690D00FAF8BA /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FEDC2337690D00FAF8BA /* PopOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		ABE3FE952337110300FAF8BA /* FavCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCollectionViewController.swift; sourceTree = "<group>"; };
 		ABE3FE9B2337231E00FAF8BA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		ABE3FE9D23373BBE00FAF8BA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		ABE3FEDC2337690D00FAF8BA /* PopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				ABE3FE932337068C00FAF8BA /* ListViewController.swift */,
 				ABE3FE952337110300FAF8BA /* FavCollectionViewController.swift */,
 				ABE3FE9B2337231E00FAF8BA /* SearchViewController.swift */,
+				ABE3FEDC2337690D00FAF8BA /* PopOverViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			files = (
 				AB08BB65233654F100F18833 /* scenes.swift in Sources */,
 				AB08BB332336543500F18833 /* ViewController.swift in Sources */,
+				ABE3FEDD2337690D00FAF8BA /* PopOverViewController.swift in Sources */,
 				AB08BB312336543500F18833 /* AppDelegate.swift in Sources */,
 				AB08BB6D2336EBF200F18833 /* SearchTableViewController.swift in Sources */,
 				ABE3FE492336EE9000FAF8BA /* Breeds.swift in Sources */,
