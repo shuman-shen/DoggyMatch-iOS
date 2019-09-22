@@ -1,0 +1,67 @@
+//
+//  scenes.swift
+//  DM1
+//
+//  Created by karen lee on 21/9/19.
+//  Copyright © 2019 karen lee. All rights reserved.
+//
+
+import Foundation
+
+enum questions{
+    case novice, apartment
+    
+    var quest:String{
+        switch self{
+        case .novice:
+            return ("Are you a novice owner?")
+        case .apartment:
+            return ("Do you live in an apartment?")
+        }
+    }
+}
+
+enum images{
+    case home, profile
+    var image:String{
+        switch self{
+        case .home:
+            return ("Logo")
+        case .profile:
+            return ("default_profile")
+        }
+    }
+}
+
+enum breeds{
+    case beagle, bulldog, labrador
+    
+    var dog:(name:String, size:String, info:String){
+        switch self{
+        case .beagle:
+            return ("Beagle", "Medium", "Active, friendly, intelligent and good temperament")
+        case .bulldog:
+            return ("French Bulldog", "Small", "Good with people, friendly dog")
+        case .labrador:
+            return ("Labrador", "Large", "Friendly and active, loves companionship")
+        }
+    }
+}
+
+enum breedImage{
+    case beagle, bulldog, labrador
+    
+    var dogImage:(name:String,image:String){
+        switch self{
+        case .beagle:
+            return ("Beagle", "Beagle")
+        case .bulldog:
+            return ("French Bulldog", "FrenchBulldog")
+        case .labrador:
+            return ("Labrador", "Labrador")
+        }
+    }
+}
+
+
+
