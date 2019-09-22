@@ -24,6 +24,7 @@
 		ABE3FE942337068C00FAF8BA /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FE932337068C00FAF8BA /* ListViewController.swift */; };
 		ABE3FE962337110300FAF8BA /* FavCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FE952337110300FAF8BA /* FavCollectionViewController.swift */; };
 		ABE3FE9C2337231E00FAF8BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FE9B2337231E00FAF8BA /* SearchViewController.swift */; };
+		ABE3FE9E23373BBE00FAF8BA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FE9D23373BBE00FAF8BA /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		ABE3FE932337068C00FAF8BA /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		ABE3FE952337110300FAF8BA /* FavCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCollectionViewController.swift; sourceTree = "<group>"; };
 		ABE3FE9B2337231E00FAF8BA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		ABE3FE9D23373BBE00FAF8BA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				ABE3FE4A2336EFC800FAF8BA /* ViewModel */,
 				AB08BB322336543500F18833 /* ViewController.swift */,
+				ABE3FE9D23373BBE00FAF8BA /* ProfileViewController.swift */,
 				AB08BB66233660F600F18833 /* MatchViewController.swift */,
 				AB08BB682336718A00F18833 /* ResultViewController.swift */,
 				AB08BB6C2336EBF200F18833 /* SearchTableViewController.swift */,
@@ -328,6 +331,7 @@
 				AB08BB67233660F600F18833 /* MatchViewController.swift in Sources */,
 				AB08BB692336718A00F18833 /* ResultViewController.swift in Sources */,
 				ABE3FE942337068C00FAF8BA /* ListViewController.swift in Sources */,
+				ABE3FE9E23373BBE00FAF8BA /* ProfileViewController.swift in Sources */,
 				ABE3FE4E2336F04D00FAF8BA /* BreedsViewModel.swift in Sources */,
 				ABE3FE962337110300FAF8BA /* FavCollectionViewController.swift in Sources */,
 			);

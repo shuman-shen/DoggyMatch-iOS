@@ -259,12 +259,12 @@
         <!--Profile-->
         <scene sceneID="wLl-x4-yW9">
             <objects>
-                <viewController title="Profile" id="9og-hk-hJn" sceneMemberID="viewController">
+                <viewController title="Profile" id="9og-hk-hJn" customClass="ProfileViewController" customModule="DM1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Kg-N5-miy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_profile" translatesAutoresizingMaskIntoConstraints="NO" id="ssT-RI-m6N">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ssT-RI-m6N">
                                 <rect key="frame" x="110" y="81" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="2v3-wd-tlZ"/>
@@ -308,6 +308,9 @@
                         <viewLayoutGuide key="safeArea" id="NXM-Sw-O4H"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create a Profile" id="3LP-Gg-5B7"/>
+                    <connections>
+                        <outlet property="profileImage" destination="ssT-RI-m6N" id="Y3q-Bv-kgb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OfB-9p-6QR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -706,7 +709,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="default_profile" width="999" height="1080"/>
         <image name="dog-solid_L" width="26.5" height="25"/>
         <image name="heart-regular_L" width="28.5" height="25"/>
         <image name="home-solid_S" width="32.5" height="25"/>
