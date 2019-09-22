@@ -2,7 +2,7 @@
 //  MatchViewController.swift
 //  DM1
 //
-//  Created by karen lee on 21/9/19.
+//  Created by xKiddos on 21/9/19.
 //  Copyright © 2019 karen lee. All rights reserved.
 //
 
@@ -20,6 +20,8 @@ class MatchViewController: UIViewController {
     
     
      var item = questions.novice
+     var change = true
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +49,7 @@ class MatchViewController: UIViewController {
         nextButton.layer.cornerRadius = nextButton.frame.height/2
         nextButton.setTitleColor(UIColor.white, for: .normal)
     }
+    
     
     
     

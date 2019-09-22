@@ -12,16 +12,32 @@ import XCTest
 class DM1Tests: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        continueAfterFailure = false
+        XCUIApplication().launch()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+       /* let app = XCUIApplication()
+        
+        let numButtons = app.buttons.count
+        let numLabels = app.staticTexts.count
+        
+        XCTAssertEqual(numButtons, 1)
+        XCTAssertEqual(numLabels, 10)
+        // Test that the initial label text is what you expect
+        let string = app.staticTexts.element(matching: .any, identifier: "iching").label
+        XCTAssertEqual(string, "62")
+        
+        XCUIApplication().buttons["Change"].tap()
+        sleep(2)
+        XCTAssertEqual(app.staticTexts.element(matching: .any, identifier: "iching").label, "72")*/
+        
+        
     }
 
     func testPerformanceExample() {
