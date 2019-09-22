@@ -19,6 +19,7 @@
 		AB08BB67233660F600F18833 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08BB66233660F600F18833 /* MatchViewController.swift */; };
 		AB08BB692336718A00F18833 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08BB682336718A00F18833 /* ResultViewController.swift */; };
 		AB08BB6D2336EBF200F18833 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08BB6C2336EBF200F18833 /* SearchTableViewController.swift */; };
+		AB5A7D1A2337861000512597 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A7D192337861000512597 /* CameraViewController.swift */; };
 		ABE3FE492336EE9000FAF8BA /* Breeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FE482336EE9000FAF8BA /* Breeds.swift */; };
 		ABE3FE4E2336F04D00FAF8BA /* BreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FE4D2336F04D00FAF8BA /* BreedsViewModel.swift */; };
 		ABE3FE942337068C00FAF8BA /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3FE932337068C00FAF8BA /* ListViewController.swift */; };
@@ -64,6 +65,7 @@
 		AB08BB66233660F600F18833 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		AB08BB682336718A00F18833 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		AB08BB6C2336EBF200F18833 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		AB5A7D192337861000512597 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		ABE3FE482336EE9000FAF8BA /* Breeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breeds.swift; sourceTree = "<group>"; };
 		ABE3FE4D2336F04D00FAF8BA /* BreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModel.swift; sourceTree = "<group>"; };
 		ABE3FE932337068C00FAF8BA /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				ABE3FE952337110300FAF8BA /* FavCollectionViewController.swift */,
 				ABE3FE9B2337231E00FAF8BA /* SearchViewController.swift */,
 				ABE3FEDC2337690D00FAF8BA /* PopOverViewController.swift */,
+				AB5A7D192337861000512597 /* CameraViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				AB08BB67233660F600F18833 /* MatchViewController.swift in Sources */,
 				AB08BB692336718A00F18833 /* ResultViewController.swift in Sources */,
 				ABE3FE942337068C00FAF8BA /* ListViewController.swift in Sources */,
+				AB5A7D1A2337861000512597 /* CameraViewController.swift in Sources */,
 				ABE3FE9E23373BBE00FAF8BA /* ProfileViewController.swift in Sources */,
 				ABE3FE4E2336F04D00FAF8BA /* BreedsViewModel.swift in Sources */,
 				ABE3FE962337110300FAF8BA /* FavCollectionViewController.swift in Sources */,
