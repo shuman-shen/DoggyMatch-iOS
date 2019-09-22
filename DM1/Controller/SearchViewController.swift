@@ -49,12 +49,6 @@ class SearchViewController: UIViewController, UITableViewDataSource {
         let destination = segue.destination as? ListDetailViewController
         let selectedBreed = viewModel.getBreed(byIndex: selectedRow.row)
         destination?.selectedBreed = selectedBreed
-     
-     
-     guard let cell = sender as? UICollectionViewCell, let indexPath = self.collectionView?.indexPath(for: cell) else{return}
-     if let destination = segue.destination as? ListDetailViewController{
-     let selectedBreed = viewModel.getBreed(byIndex: indexPath.row)
-     destination.selectedBreed = selectedBreed
      }
      
     }*/

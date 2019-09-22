@@ -34,7 +34,7 @@ enum images{
 }
 
 enum breeds{
-    case beagle, bulldog, labrador
+    case beagle, bulldog, labrador, shiba, pomeranian, germanShepherd
     
     var dog:(name:String, size:String, info:String){
         switch self{
@@ -44,12 +44,18 @@ enum breeds{
             return ("French Bulldog", "Small", "Good with people, friendly dog")
         case .labrador:
             return ("Labrador", "Large", "Friendly and active, loves companionship")
+        case .shiba:
+            return ("Shiba Inu", "Medium", "Japanese Hunting dog, active")
+        case .pomeranian:
+            return ("Pomeranian", "Small", "Small, friendly dog")
+        case .germanShepherd:
+            return ("German Shepherd", "Large", "Large size. Originally breed for hunting")
         }
     }
 }
 
 enum breedImage{
-    case beagle, bulldog, labrador
+    case beagle, bulldog, labrador, shiba, pomeranian, germanShepherd
     
     var dogImage:(name:String,image:String){
         switch self{
@@ -59,6 +65,12 @@ enum breedImage{
             return ("French Bulldog", "FrenchBulldog")
         case .labrador:
             return ("Labrador", "Labrador")
+        case .shiba:
+            return ("Shiba", "Shiba")
+        case .pomeranian:
+            return ("Pomeranian", "Pomeranian")
+        case .germanShepherd:
+            return ("German Shepherd", "GermanShepherd")
         }
     }
 }
