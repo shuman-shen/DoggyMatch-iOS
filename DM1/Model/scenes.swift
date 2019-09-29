@@ -9,7 +9,7 @@
 import Foundation
 
 enum questions{
-    case novice, apartment
+    case novice, apartment, shed, kids
     
     var quest:String{
         switch self{
@@ -17,6 +17,10 @@ enum questions{
             return ("Are you a novice owner?")
         case .apartment:
             return ("Do you live in an apartment?")
+        case .shed:
+            return ("So you feel annoyed cleaning sheds?")
+        case .kids:
+            return ("Do you have kids at home?")
         }
     }
 }
