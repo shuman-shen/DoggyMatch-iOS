@@ -18,7 +18,7 @@ enum questions{
         case .apartment:
             return ("Do you live in an apartment?")
         case .shed:
-            return ("So you feel annoyed cleaning sheds?")
+            return ("Do you feel annoyed cleaning sheds?")
         case .kids:
             return ("Do you have kids at home?")
         }
