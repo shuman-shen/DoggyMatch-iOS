@@ -27,6 +27,88 @@ class MatchViewController: UIViewController {
     var item = questions.novice
     var change = true
  
+    func selected(button: UIButton){
+        button.isSelected = true
+        button.backgroundColor = UIColor.blue 
+    }
+    
+    func notSelected(button: UIButton){
+        button.isSelected = false
+        button.backgroundColor = UIColor.lightGray
+    }
+    
+    @IBAction func yes1(_ sender: UIButton) {
+        if yes1.isSelected == false {
+            selected(button: yes1)
+            notSelected(button: no1)
+        } else {
+            notSelected(button: yes1)
+        }
+    }
+    
+    @IBAction func no1(_ sender: UIButton) {
+        if no1.isSelected == false {
+            selected(button: no1)
+            notSelected(button: yes1)
+        } else {
+            notSelected(button: no1)
+        }
+    }
+    
+    @IBAction func yes2(_ sender: UIButton) {
+        if yes2.isSelected == false {
+            selected(button: yes2)
+            notSelected(button: no2)
+        } else {
+            notSelected(button: yes2)
+        }
+    }
+    
+    @IBAction func no2(_ sender: UIButton) {
+        if no2.isSelected == false {
+            selected(button: no2)
+            notSelected(button: yes2)
+        } else {
+            notSelected(button: no2)
+        }
+    }
+    
+    @IBAction func yes3(_ sender: UIButton) {
+        if yes3.isSelected == false {
+            selected(button: yes3)
+            notSelected(button: no3)
+        } else {
+            notSelected(button: yes3)
+        }
+    }
+    
+    @IBAction func no3(_ sender: UIButton) {
+        if no3.isSelected == false {
+            selected(button: no3)
+            notSelected(button: yes3)
+        } else {
+            notSelected(button: no3)
+        }
+    }
+    
+    @IBAction func yes4(_ sender: UIButton) {
+        if yes4.isSelected == false {
+            selected(button: yes4)
+            notSelected(button: no4)
+        } else {
+            notSelected(button: yes4)
+        }
+    }
+    
+    @IBAction func no4(_ sender: UIButton) {
+        if no4.isSelected == false {
+            selected(button: no4)
+            notSelected(button: yes4)
+        } else {
+            notSelected(button: no4)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +155,7 @@ class MatchViewController: UIViewController {
         nextButton.backgroundColor = UIColor.orange
         nextButton.layer.cornerRadius = nextButton.frame.height/2
         nextButton.setTitleColor(UIColor.white, for: .normal)
+        
     }
     
     

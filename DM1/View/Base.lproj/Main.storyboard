@@ -44,6 +44,9 @@
                                         <state key="normal" title="Yes">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="yes1:" destination="KZd-J2-GEN" eventType="touchUpInside" id="JrO-1K-eVh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akz-MP-TkW">
                                         <rect key="frame" x="18" y="59" width="234" height="24"/>
@@ -51,6 +54,9 @@
                                         <state key="normal" title="No">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="no1:" destination="KZd-J2-GEN" eventType="touchUpInside" id="Yok-Vj-HoA"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quest2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0Y-jm-Znf">
                                         <rect key="frame" x="121.5" y="91" width="45.5" height="16"/>
@@ -64,6 +70,9 @@
                                         <state key="normal" title="Yes">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="yes2:" destination="KZd-J2-GEN" eventType="touchUpInside" id="WQO-2i-ceh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVd-3O-Mmn">
                                         <rect key="frame" x="18" y="142" width="234" height="24"/>
@@ -71,6 +80,9 @@
                                         <state key="normal" title="No">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="no2:" destination="KZd-J2-GEN" eventType="touchUpInside" id="LAp-Ya-GMr"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quest3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lur-uh-byX">
                                         <rect key="frame" x="18" y="174" width="234" height="16"/>
@@ -84,6 +96,9 @@
                                         <state key="normal" title="Yes">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="yes3:" destination="KZd-J2-GEN" eventType="touchUpInside" id="kdy-73-FRs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auz-zE-HYf">
                                         <rect key="frame" x="18" y="225" width="234" height="24"/>
@@ -91,6 +106,9 @@
                                         <state key="normal" title="No">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="no3:" destination="KZd-J2-GEN" eventType="touchUpInside" id="1mY-YR-qc2"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quest4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XV-tR-rCm">
                                         <rect key="frame" x="18" y="257" width="234" height="16"/>
@@ -104,6 +122,9 @@
                                         <state key="normal" title="Yes">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="yes4:" destination="KZd-J2-GEN" eventType="touchUpInside" id="zDS-4H-psF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5b-Cj-KY6">
                                         <rect key="frame" x="18" y="308" width="234" height="24"/>
@@ -111,6 +132,9 @@
                                         <state key="normal" title="No">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="no4:" destination="KZd-J2-GEN" eventType="touchUpInside" id="A68-ai-2Q5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
