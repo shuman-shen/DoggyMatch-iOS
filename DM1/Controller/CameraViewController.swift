@@ -8,141 +8,87 @@
 
 import UIKit
 import AVKit
-import MobileCoreServices
+import CoreML
+import Vision
 
-class CameraViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var photoButton: UIButton!
+class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate  {
+    @IBOutlet weak var cameraDisplay: UIImageView!
+    @IBOutlet weak var resultLabel: UILabel!
     
-    var avPlayerViewController: AVPlayerViewController!
-    var image: UIImage?
-    var movieURL: URL?
-    var lastChosenMediaType: String?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
-            photoButton.isHidden = true
+            super.viewDidLoad()
+            setUpCamera()
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        updateDisplay()
-    }
-    
-    func updateDisplay(){
-        if let mediaType = lastChosenMediaType {
-            if mediaType == (kUTTypeImage as NSString) as String {
-                imageView.image = image!
-                imageView.isHidden = false
-                if avPlayerViewController != nil {
-                    avPlayerViewController!.view.isHidden = true
-                }
-            }else if mediaType == (kUTTypeMovie as NSString) as String {
-                if avPlayerViewController == nil {
-                    avPlayerViewController = AVPlayerViewController()
-                    let avPlayerView = avPlayerViewController!.view
-                    avPlayerView?.frame = imageView.frame
-                    avPlayerView?.clipsToBounds = true
-                    view.addSubview(avPlayerView!)
-                }
-                if let url = movieURL {
-                    imageView.isHidden = true
-                    avPlayerViewController.player = AVPlayer(url: url)
-                    avPlayerViewController!.view.isHidden = false
-                    avPlayerViewController!.player!.play()
-                }
-            }
-        }
-    }
-
- /*   @IBAction func takeButton(_ sender: UIButton) {
-        pickMediaFromSource(UIImagePickerController.SourceType.camera)
-    }
-    
-    func pickMediaFromSource(_ sourceType:UIImagePickerController.SourceType){
-        if UIImagePickerController.isSourceTypeAvailable(sourceType){
-            let picker = UIImagePickerController()
-            picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: sourceType)!
-             picker.delegate = self
-            picker.allowsEditing = true
-            picker.sourceType = sourceType
-            present(picker, animated: true, completion: nil)
-        }else{
-            let alertController = UIAlertController(title:"Error accessing media",message: "Unsupported media source.", preferredStyle: UIAlertController.Style.alert)
-            
-            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
-            
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
-        }
-    }
-}
-
-extension ViewController: UIImagePickerControllerDelegate
-{
-    // Delegate method to process once the media has been selected
-    // by the user.
-    func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [String : Any]) {
-        lastChosenMediaType = info[UIImagePickerControllerMediaType] as? String
         
-        // Set the variable to the data retrieved.
-        if let mediaType = lastChosenMediaType {
-            if mediaType == (kUTTypeImage as NSString) as String {
-                image = info[UIImagePickerControllerEditedImage] as? UIImage
-                saveImage(image: image!, path: "test")
+
+        func setUpCamera(){ //Displays live feed from camera
+            guard let device = AVCaptureDevice.default(for: .video) else{return}
+            
+            guard let input = try? AVCaptureDeviceInput(device: device) else {return}
+            
+            //create preview layer
+            let session = AVCaptureSession()
+           session.sessionPreset = .hd4K3840x2160
+           
+            
+            
+            let previewLayer = AVCaptureVideoPreviewLayer(session: session)
+            previewLayer.frame = view.frame
+            cameraDisplay.layer.addSublayer(previewLayer)
+            
+            let output = AVCaptureVideoDataOutput()
+            output.setSampleBufferDelegate(self, queue: DispatchQueue(label: "CameraOutput"))
+            
+            session.addInput(input)
+            session.addOutput(output)
+            session.startRunning()
+        }
+        
+        //check output
+        func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+            guard let sampleBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {return}
+            scanImage(buffer: sampleBuffer)
+        }
+        
+        func scanImage(buffer: CVPixelBuffer){
+            guard let model = try? VNCoreMLModel(for: xKiddosClassifier().model) else {return}
+            
+            let request = VNCoreMLRequest(model: model) { request, _ in
+                guard let results = request.results as? [VNClassificationObservation] else {return}
+                guard let mostConfidentResult = results.first else {return}
+               
                 
-            } else if mediaType == (kUTTypeMovie as NSString) as String {
-                movieURL = info[UIImagePickerControllerMediaURL] as? URL
+                DispatchQueue.main.async{
+                    if mostConfidentResult.confidence >= 0.9{
+                        //let confidenceText = "\n \(Int(mostConfidentResult.confidence * 100.0))% confidenced"
+                               
+                        switch mostConfidentResult.identifier {
+                        case "David":
+                            self.resultLabel.text = "Hi David"
+                           
+                        case "Susan":
+                            self.resultLabel.text = "Hi Susan"
+                           
+                        case "Karen":
+                            self.resultLabel.text = "Hi Karen"
+                           
+                        default:
+                            return
+                        }
+                    }else{
+                        self.resultLabel.text = ""
+                    }
+                }
             }
-        }
-        
-        // Dismiss the picker to return to the apps view
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-    func saveImage (image: UIImage, path: String)
-    {
-        let pngImageData = image.pngData()
-        
-        let docDir = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        
-        let imageUniqueName : Int64 = Int64(NSDate().timeIntervalSince1970 * 1000);
-        
-        var filePath = docDir.appendingPathComponent("\(imageUniqueName).png");
-        
-        do{
-            try pngImageData?.write(to : filePath , options : .atomic)
             
-        }catch{
-            print("couldn't write image")
-        }
-        
-        /* Test to see if the image was written */
-        filePath = docDir.appendingPathComponent("\(imageUniqueName).png");
-        
-        if FileManager.default.fileExists(atPath: filePath.path){
-            
-            if let _ = UIImage(contentsOfFile : filePath.path){
-                
-                let confirmImage = UIImage(named : filePath.path)
-                print(confirmImage!.size)
+            let requestHandler = VNImageRequestHandler(cvPixelBuffer: buffer, options: [:])
+            do{
+                try  requestHandler.perform([request])
+            }catch{
+                print(error)
             }
+           
         }
     }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion:nil)
-    }
-}
 
-
-extension ViewController:UINavigationControllerDelegate{}
-
-    
-    */
-
- }
