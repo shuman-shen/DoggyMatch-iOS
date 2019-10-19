@@ -13,6 +13,8 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var resultText: UITextView!
     @IBOutlet weak var resultSave: UIButton!
     
+    //private var viewModel = ResultViewModel()
+    
     var item = breeds.beagle
     var itemImage = breedImage.beagle
     
@@ -24,9 +26,15 @@ class ResultViewController: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
+      //  guard let name = self.resultText.text, let detail = self.resultText.text, let image = self.resultImage.text, let user = self.resultImage.text  else{return}
+        
+       // viewModel.addBreed(name, user, image, detail)
+        
+        
         let alertController = UIAlertController(title: "Breed", message: "Save to Favourites?", preferredStyle: .alert)
         
         let saveButton = UIAlertAction(title: "Save", style: .default, handler: { (action) -> Void in
+            //add save to file method
             print("Saved to favourites")
         })
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in

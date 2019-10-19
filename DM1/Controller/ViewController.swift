@@ -8,14 +8,23 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     
     var item = images.home
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         image.image = UIImage(named: item.image)
+        
+        var request = REST_Request()
+        request.getBreeds(andNamed: "Poodle")
+        
+       
     }
 
 

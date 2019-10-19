@@ -7,27 +7,50 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ProfileViewController: UIViewController {
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: UITextField!
+    @IBOutlet weak var textField: UITextField! 
+    @IBOutlet weak var takePhoto: UIButton!
+    @IBOutlet weak var submit: UIButton!
+    @IBOutlet weak var selectPhoto: UIButton!
     
-    var item = images.profile
+    private var viewModel = ProfileViewModel()
+    let imagePicker = UIImagePickerController()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        profileImage.image = UIImage(named: item.image)
-        // Do any additional setup after loading the view.
+    @IBAction func submitProfile(_ sender: Any) {
+        if(textField.text != "") {
+            //save profile
+            //guard let username = textField.text, let userImage = profileImage.text else{return}
+            //viewModel.addUser(username, userImage)
+            
+            //confirm alert
+            let alert = UIAlertController(title: "Create Profile", message: "Profile created", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(title: "Create Profile", message: "Please enter your name", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func selectPhotoBut(_ sender: Any) {
+        if(textField.text != "") {
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = .photoLibrary
+            
+            present(imagePicker, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Create Profile", message: "Please enter your name", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
-    */
+    
+    }
 
-}
+

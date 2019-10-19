@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 struct BreedsViewModel{
+    private var breedManager = BreedManager.shared
     private (set) var breeds:[Breeds] = []
     
     var count:Int{
@@ -34,4 +35,30 @@ struct BreedsViewModel{
         let image = UIImage(named: breeds[index].imageName)
         return (title, description, image)
     }
+    
+    //display list of breeds for favourite
+    var breedList:String{
+        var result: String = ""
+        let breeds = breedManager.breeds
+        for(_, breed) in breeds.enumerated(){
+            if let name = breed.name{
+                result += name + "\n"
+            }
+        }
+        return result
+    }
+    
+    //add to favourite list
+    mutating func addBreed(_ name:String,_ user:String, _ image:String, _ detail: String){
+        guard let image = UIImage(named: image) else {return}
+        
+        breedManager.addBreeds(name, image, detail)
+    }
+    
+    mutating func addBreeds(_ name:String, _ image:String, _ detail: String){
+        guard let image = UIImage(named: image) else {return}
+        
+        breedManager.addBreeds(name, image, detail)
+    }
+    
 }

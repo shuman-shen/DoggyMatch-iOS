@@ -25,7 +25,7 @@ class MatchViewController: UIViewController {
     @IBOutlet weak var no4: UIButton!
     
     var item = questions.novice
-    var change = true
+    //var change = true
  
     func selected(button: UIButton){
         button.isSelected = true
@@ -110,6 +110,21 @@ class MatchViewController: UIViewController {
     }
     
     
+    
+    private func isButtonValid(){ //fix
+        var isValid = true
+        
+        if (yes1.isSelected == true || no1.isSelected == true) && (yes2.isSelected == true || no2.isSelected == true) && (yes3.isSelected == true || no3.isSelected == true) && (yes4.isSelected == true || no4.isSelected == true ){
+            nextButton.isEnabled = isValid
+        }else if (yes1.isSelected == false || no1.isSelected == false) && (yes2.isSelected == false || no2.isSelected == false) && (yes3.isSelected == false || no3.isSelected == false) && (yes4.isSelected == false || no4.isSelected == false ){
+            isValid = false
+            nextButton.isEnabled = isValid
+        }
+        
+       // nextButton.isEnabled = isValid
+    }
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         quest1.text = item.quest
@@ -156,6 +171,7 @@ class MatchViewController: UIViewController {
         nextButton.layer.cornerRadius = nextButton.frame.height/2
         nextButton.setTitleColor(UIColor.white, for: .normal)
         
+       // isButtonValid()
     }
     
     
