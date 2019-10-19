@@ -13,12 +13,12 @@ struct REST_Request{
     private let session = URLSession.shared //session created
     
     private let base_url: String = "https://api.thedogapi.com/v1/breeds/search?q="
-    private let paramQuery: String = "alaskan"
+    //private let paramQuery: String = "q"
     
     mutating func getBreeds(andNamed: String){
         dogBreeds = []
        // let url = base_url + paramQuery + andNamed
-        let url = base_url + paramQuery + andNamed
+        let url = base_url + andNamed
         
         //conversion to remove spaces for a valid URL
         guard let escapedAddress = url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else{

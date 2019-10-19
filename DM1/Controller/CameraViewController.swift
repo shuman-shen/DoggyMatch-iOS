@@ -18,8 +18,9 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     @IBAction func takePhoto(_ sender: Any) {
         //capture()
-         let alertController = UIAlertController(title: "Take Photo", message: "Photo taken", preferredStyle: .alert)
-    }
+        let alert = UIAlertController(title: "Take Photo", message: "Photo taken", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)    }
     
     var captureSession:AVCaptureSession?
     var photoOutput = AVCapturePhotoOutput()
