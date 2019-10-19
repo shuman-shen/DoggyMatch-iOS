@@ -109,7 +109,38 @@ class MatchViewController: UIViewController {
         }
     }
     
+     var request = REST_Request()
     
+    @IBAction func nextButton(_ sender: UIButton) {
+        if (sender.tag == 1) && (sender.tag == 3 || sender.tag == 4) && (sender.tag == 5 || sender.tag == 6) && (sender.tag == 7 || sender.tag == 8){
+            request.getBreeds(andNamed: "Yorkshire Terrier")
+            print("Yorkshire")
+        }else if (sender.tag == 2) && (sender.tag == 3 || sender.tag == 4) && (sender.tag == 5 || sender.tag == 6) && (sender.tag == 7 || sender.tag == 8){
+            request.getBreeds(andNamed: "German Shepherd")
+            print("German Shephard")
+        }else if (sender.tag == 1 || sender.tag == 2) && (sender.tag == 3) && (sender.tag == 5 || sender.tag == 6) && (sender.tag == 7 || sender.tag == 8){
+            request.getBreeds(andNamed: "Pug")
+            print("Pug")
+        }else if (sender.tag == 1 || sender.tag == 2) && (sender.tag == 4) && (sender.tag == 5 || sender.tag == 6) && (sender.tag == 7 || sender.tag == 8){
+            request.getBreeds(andNamed: "Labrador")
+            print("Labrador")
+        }else if (sender.tag == 1 || sender.tag == 2) && (sender.tag == 3 || sender.tag == 4) && (sender.tag == 5) && (sender.tag == 7 || sender.tag == 8){
+            request.getBreeds(andNamed: "Beagle")
+            print("Beagle")
+        }else if (sender.tag == 1 || sender.tag == 2) && (sender.tag == 3 || sender.tag == 4) && (sender.tag == 6) && (sender.tag == 7 || sender.tag == 8){
+            request.getBreeds(andNamed: "Poodle")
+            print("Poodle")
+        }else if (sender.tag == 1 || sender.tag == 2) && (sender.tag == 3 || sender.tag == 4) && (sender.tag == 5 || sender.tag == 6) && (sender.tag == 7){
+            request.getBreeds(andNamed: "Shiba")
+            print("Shiba")
+        }else if (sender.tag == 1 || sender.tag == 2) && (sender.tag == 3 || sender.tag == 4) && (sender.tag == 5 || sender.tag == 6) && ( sender.tag == 8){
+            request.getBreeds(andNamed: "French Bulldog")
+            print("French Bulldog")
+        }else{
+            request.getBreeds(andNamed: "Maltese")
+            print("Maltese")
+        }
+    }
     
     private func isButtonValid(){ //fix
         var isValid = true
@@ -120,7 +151,6 @@ class MatchViewController: UIViewController {
             isValid = false
             nextButton.isEnabled = isValid
         }
-        
        // nextButton.isEnabled = isValid
     }
     

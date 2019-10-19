@@ -26,6 +26,10 @@ struct BreedsViewModel{
         breeds.append(Breeds.Shiba)
         breeds.append(Breeds.Pomeranian)
         breeds.append(Breeds.GermanShepherd)
+        breeds.append(Breeds.Poodle)
+        breeds.append(Breeds.Maltese)
+        breeds.append(Breeds.Yorkshire)
+        breeds.append(Breeds.Pug)
     }
     
     func getBreed(byIndex index:Int) -> (title:String, description:String, image:UIImage?){

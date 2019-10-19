@@ -26,6 +26,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="nextButton:" destination="KZd-J2-GEN" eventType="touchUpInside" id="eBS-Bf-H1V"/>
                                     <segue destination="Ke9-fi-t3N" kind="show" id="d9o-68-for"/>
                                 </connections>
                             </button>
@@ -38,7 +39,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cs-E4-Ml0">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cs-E4-Ml0">
                                         <rect key="frame" x="18" y="32" width="238" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="Yes">
@@ -48,7 +49,7 @@
                                             <action selector="yes1:" destination="KZd-J2-GEN" eventType="touchUpInside" id="JrO-1K-eVh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akz-MP-TkW">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akz-MP-TkW">
                                         <rect key="frame" x="18" y="59" width="238" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="No">
@@ -64,7 +65,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3b-ZK-ELS">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3b-ZK-ELS">
                                         <rect key="frame" x="18" y="115" width="238" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="Yes">
@@ -74,7 +75,7 @@
                                             <action selector="yes2:" destination="KZd-J2-GEN" eventType="touchUpInside" id="WQO-2i-ceh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVd-3O-Mmn">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVd-3O-Mmn">
                                         <rect key="frame" x="18" y="142" width="238" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="No">
@@ -90,7 +91,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ck-Zh-2ef">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ck-Zh-2ef">
                                         <rect key="frame" x="18" y="198" width="238" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="Yes">
@@ -100,7 +101,7 @@
                                             <action selector="yes3:" destination="KZd-J2-GEN" eventType="touchUpInside" id="kdy-73-FRs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auz-zE-HYf">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auz-zE-HYf">
                                         <rect key="frame" x="18" y="225" width="238" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="No">
@@ -116,7 +117,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW0-gh-l0T">
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW0-gh-l0T">
                                         <rect key="frame" x="18" y="281" width="238" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="Yes">
@@ -126,7 +127,7 @@
                                             <action selector="yes4:" destination="KZd-J2-GEN" eventType="touchUpInside" id="zDS-4H-psF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5b-Cj-KY6">
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5b-Cj-KY6">
                                         <rect key="frame" x="18" y="308" width="238" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="No">
@@ -506,10 +507,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="8Jb-Z6-tAS" kind="relationship" relationship="viewControllers" id="yur-y6-gVL"/>
-                        <segue destination="jNq-t8-OUB" kind="relationship" relationship="viewControllers" id="IwU-Yh-NtH"/>
-                        <segue destination="Isw-V5-fMb" kind="relationship" relationship="viewControllers" id="Jdx-Tc-Pz0"/>
                         <segue destination="Fa1-Ms-78O" kind="relationship" relationship="viewControllers" id="Ujw-v7-b16"/>
-                        <segue destination="6is-Ut-Wgh" kind="relationship" relationship="viewControllers" id="gQM-ev-gfx"/>
                         <segue destination="NoL-rc-b5p" kind="relationship" relationship="viewControllers" id="acN-Pr-FDg"/>
                     </connections>
                 </tabBarController>
@@ -575,26 +573,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dX7-pv-ble" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1867.5" y="2373.5915492957747"/>
-        </scene>
-        <!--Match-->
-        <scene sceneID="Eek-hB-rf2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jNq-t8-OUB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Match" image="dog-solid_L" selectedImage="dog-solid_L" id="rgC-ac-F38"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YQe-TX-mzB">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="KZd-J2-GEN" kind="relationship" relationship="rootViewController" id="jcs-fa-BdM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eqg-p8-XAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2788.125" y="55.985915492957744"/>
+            <point key="canvasLocation" x="938" y="2374"/>
         </scene>
         <!--Search-->
         <scene sceneID="g5q-dW-bHo">
@@ -726,25 +705,6 @@
             </objects>
             <point key="canvasLocation" x="3783.75" y="2373.5915492957747"/>
         </scene>
-        <!--List-->
-        <scene sceneID="rOp-Xo-pfQ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Isw-V5-fMb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" image="list-solid_S" selectedImage="list-solid_S" id="6Bj-zh-U7y"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ymf-3Z-k9G">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="U4P-R9-cmD" kind="relationship" relationship="rootViewController" id="FCe-r3-cQR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MjE-Yz-SdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2865" y="1586.6197183098591"/>
-        </scene>
         <!--Search-->
         <scene sceneID="Qua-4d-Fma">
             <objects>
@@ -769,6 +729,9 @@
                                 <state key="normal" title="Search">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchButton:" destination="JAy-9t-WHp" eventType="touchUpInside" id="yyA-zD-l3y"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GWN-en-eBQ">
                                 <rect key="frame" x="16" y="208" width="288" height="253"/>
@@ -789,7 +752,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3001" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82i-UB-ucx">
-                                                    <rect key="frame" x="83" y="11" width="438" height="20.5"/>
+                                                    <rect key="frame" x="83" y="11" width="190" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -837,7 +800,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yf-xg-IWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="3065"/>
+            <point key="canvasLocation" x="1791" y="1588"/>
         </scene>
         <!--Favourite-->
         <scene sceneID="ef8-Z1-t15">
@@ -857,25 +820,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6c3-El-TMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="937.5" y="1587.6760563380283"/>
-        </scene>
-        <!--Search-->
-        <scene sceneID="7j4-yY-Ugx">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6is-Ut-Wgh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="search-solid_S" selectedImage="search-solid_S" id="zus-Rl-uNy"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hy5-Zq-aqT">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="JAy-9t-WHp" kind="relationship" relationship="rootViewController" id="GUs-4l-OaS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="51P-cS-M2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-60" y="1588"/>
         </scene>
         <!--Profile-->
         <scene sceneID="MyU-uy-vCd">
@@ -901,17 +845,11 @@
         <image name="Logo" width="1086" height="286"/>
         <image name="default_profile" width="999" height="1080"/>
         <image name="dog" width="225" height="225"/>
-        <image name="dog-solid_L" width="26.5" height="25"/>
         <image name="heart-regular_L" width="28.5" height="25"/>
         <image name="home-solid_S" width="32.5" height="25"/>
-        <image name="list-solid_S" width="30.5" height="25"/>
-        <image name="search-solid_S" width="25" height="25"/>
         <image name="user-regular_S" width="25" height="28.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KXX-iV-phq"/>
         <segue reference="Kys-is-adD"/>
-        <segue reference="LcZ-U3-Gok"/>
-        <segue reference="Lom-u5-xkR"/>
     </inferredMetricsTieBreakers>
 </document>

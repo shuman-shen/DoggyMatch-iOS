@@ -22,6 +22,7 @@
 		AB08BB692336718A00F18833 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08BB682336718A00F18833 /* ResultViewController.swift */; };
 		AB08BB6D2336EBF200F18833 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08BB6C2336EBF200F18833 /* SearchTableViewController.swift */; };
 		AB0F5EB12351DD75009C1584 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F5EB02351DD75009C1584 /* CameraViewController.swift */; };
+		AB16D2F2235AF055008FF63B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB16D2F1235AF055008FF63B /* PersistenceManager.swift */; };
 		AB6BE27D235445A9007A7A00 /* DogAPIbreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE27C235445A9007A7A00 /* DogAPIbreed.swift */; };
 		AB6BE27F23544672007A7A00 /* RESTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BE27E23544672007A7A00 /* RESTRequest.swift */; };
 		AB84DC1F235336F80053B31F /* xKiddosClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AB84DC1E235336F70053B31F /* xKiddosClassifier.mlmodel */; };
@@ -87,6 +88,7 @@
 		AB08BB682336718A00F18833 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		AB08BB6C2336EBF200F18833 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		AB0F5EB02351DD75009C1584 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		AB16D2F1235AF055008FF63B /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		AB6BE27C235445A9007A7A00 /* DogAPIbreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPIbreed.swift; sourceTree = "<group>"; };
 		AB6BE27E23544672007A7A00 /* RESTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTRequest.swift; sourceTree = "<group>"; };
 		AB84DC1E235336F70053B31F /* xKiddosClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = xKiddosClassifier.mlmodel; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				AB08BB3A2336543700F18833 /* Assets.xcassets */,
 				AB08BB3C2336543700F18833 /* LaunchScreen.storyboard */,
 				AB08BB3F2336543700F18833 /* Info.plist */,
+				AB16D2F1235AF055008FF63B /* PersistenceManager.swift */,
 			);
 			path = DM1;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				ABE3FEDD2337690D00FAF8BA /* PopOverViewController.swift in Sources */,
 				AB08BB312336543500F18833 /* AppDelegate.swift in Sources */,
 				AB08BB6D2336EBF200F18833 /* SearchTableViewController.swift in Sources */,
+				AB16D2F2235AF055008FF63B /* PersistenceManager.swift in Sources */,
 				AB6BE27F23544672007A7A00 /* RESTRequest.swift in Sources */,
 				ABD32ADF235AA5BC002A4D19 /* ProfileViewModel.swift in Sources */,
 				ABD32AD8235A92DF002A4D19 /* Breed+CoreDataClass.swift in Sources */,

@@ -36,9 +36,15 @@ class SearchViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    @IBAction func searchButton(_ sender: Any) {
+        var request = REST_Request()
+        request.getBreeds(andNamed: searchbar.text!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
+        
+        }
     
     // MARK: - Navigation
 

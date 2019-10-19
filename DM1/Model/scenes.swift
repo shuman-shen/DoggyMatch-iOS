@@ -38,7 +38,7 @@ enum images{
 }
 
 enum breeds{
-    case beagle, bulldog, labrador, shiba, pomeranian, germanShepherd
+    case beagle, bulldog, labrador, shiba, pomeranian, germanShepherd, poodle, maltese, yorkshire, pug
     
     var dog:(name:String, size:String, info:String){
         switch self{
@@ -54,12 +54,20 @@ enum breeds{
             return ("Pomeranian", "Small", "Pomeranians are generally perky, friendly little dogs. These are active little dogs that do need daily exercise, even if it is just a walk around the block. They are quite intelligent and do well in obedience competitions despite a small independent streak. As they age, they are more amenable to being truly lap dogs.")
         case .germanShepherd:
             return ("German Shepherd", "Large", "German shepherd dogs get along well with children and other pets if raised with them, but in keeping with their guarding instincts, they tend to be leery of strangers. The breed is considered to be smart and easy to train.")
+        case .poodle:
+            return ("Poodle", "Medium", "Poodles are a group of formal dog breeds, the Standard Poodle, Miniature Poodle and Toy Poodle. The origin of the breed is still discussed, with a prominent dispute over whether the poodle descends from Germany as a type of water dog, or from the French Barbet")
+        case .maltese:
+            return ("Maltese", "Small", "The Maltese is a small breed of dog in the Toy Group. It descends from dogs originating in the Central Mediterranean Area. The breed name and origins are generally understood to derive from the Mediterranean island nation of Malta")
+        case .yorkshire:
+            return ("Yorkshire Terrier", "Small", "The Yorkshire Terrier is a small dog breed of terrier type, developed during the 19th century in Yorkshire, England. Ideally its maximum size is 7 pounds. A popular companion dog, the Yorkshire Terrier has also been part of the development of other breeds, such as the Silky Terrier")
+        case .pug:
+            return ("Pug", "Small", "The pug is a breed of dog with physically distinctive features of a wrinkly, short-muzzled face, and curled tail. The breed has a fine, glossy coat that comes in a variety of colours, most often fawn or black, and a compact square body with well-developed muscles")
         }
     }
 }
 
 enum breedImage{
-    case beagle, bulldog, labrador, shiba, pomeranian, germanShepherd
+    case beagle, bulldog, labrador, shiba, pomeranian, germanShepherd, poodle, maltese, yorkshire, pug
     
     var dogImage:(name:String,image:String){
         switch self{
@@ -75,6 +83,14 @@ enum breedImage{
             return ("Pomeranian", "Pomeranian")
         case .germanShepherd:
             return ("German Shepherd", "GermanShepherd")
+        case .poodle:
+            return ("Poodle", "Poodle")
+        case .maltese:
+            return ("Maltese", "Maltese")
+        case .yorkshire:
+            return ("Yorkshire Terrier", "Yorkshire")
+        case .pug:
+            return ("Pug", "Pug")
         }
     }
 }

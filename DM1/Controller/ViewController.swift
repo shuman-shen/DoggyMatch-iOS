@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         image.image = UIImage(named: item.image)
         
-        var request = REST_Request()
-        request.getBreeds(andNamed: "Poodle")
+       /* var request = REST_Request()
+        request.getBreeds(andNamed: "Poodle")*/
         
        
     }
