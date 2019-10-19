@@ -15,8 +15,8 @@ class ResultViewController: UIViewController {
     
     //private var viewModel = ResultViewModel()
     
-    var item = breeds.maltese
-    var itemImage = breedImage.maltese
+    var item = breeds.poodle
+    var itemImage = breedImage.poodle
     
    // let persistenceManager: PersistenceManager
     
@@ -83,7 +83,19 @@ class ResultViewController: UIViewController {
         
         writeToFile(to: newFilePath)
         
-        //resultText.text = readContentsOfFile(at: fm.newDirectory, with: resultText.text!, using: fm.fileManager)
+    }
+    
+    func remove(){
+        let fm = setUpForFileWriting()
+        // Deleting a directory
+        do
+        {
+            try fm.fileManager.removeItem(atPath: fm.newDirectory)
+        }
+        catch let error as NSError
+        {
+            print ("Error: \(error.localizedDescription )")
+        }
     }
     
     func setUpForFileWriting() -> (fileManager: FileManager, newDirectory: String)

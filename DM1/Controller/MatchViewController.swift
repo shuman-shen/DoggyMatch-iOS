@@ -128,8 +128,8 @@ class MatchViewController: UIViewController {
             request.getBreeds(andNamed: "Beagle")
             print("Beagle")
         }else if (sender.tag == 1 || sender.tag == 2) && (sender.tag == 3 || sender.tag == 4) && (sender.tag == 6) && (sender.tag == 7 || sender.tag == 8){
-            request.getBreeds(andNamed: "Poodle")
-            print("Poodle")
+            request.getBreeds(andNamed: "Maltese")
+            print("Maltese")
         }else if (sender.tag == 1 || sender.tag == 2) && (sender.tag == 3 || sender.tag == 4) && (sender.tag == 5 || sender.tag == 6) && (sender.tag == 7){
             request.getBreeds(andNamed: "Shiba")
             print("Shiba")
@@ -137,8 +137,8 @@ class MatchViewController: UIViewController {
             request.getBreeds(andNamed: "French Bulldog")
             print("French Bulldog")
         }else{
-            request.getBreeds(andNamed: "Maltese")
-            print("Maltese")
+            request.getBreeds(andNamed: "Poodle")
+            print("Poodle")
         }
     }
     
